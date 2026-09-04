@@ -1,2 +1,34 @@
-.DS_Store
+# ---------------------------------------------------------------------------
+# Client matter data must never enter this repository.
+#
+# The skill writes every matter into `matters/<date>_<slug>/`. That is real
+# contract data belonging to real counterparties. It stays local, always.
+# These rules are deliberately broad — a false positive costs you one `git add
+# -f`, a false negative publishes someone's agreement.
+# ---------------------------------------------------------------------------
+
 matters/
+**/matters/
+**/01_intake/
+**/02_exposure/
+**/03_redline/
+**/04_review_gate/
+**/05_rounds/
+CONTEXT.md
+approved.md
+MANIFEST.md
+
+# Source documents in any form
+*.pdf
+*.docx
+*.doc
+*.rtf
+*.odt
+*.eml
+*.msg
+*.xlsx
+
+# Scratch
+.DS_Store
+*.swp
+*~
